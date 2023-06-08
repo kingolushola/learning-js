@@ -494,283 +494,381 @@
 
 //ARRAYS [elements,elememnts,null,boolean,arrays]
 
-const students = ["Mofe", "Precious", "sheu"];
-console.log(students);
+// const students = ["Mofe", "Precious", "sheu"];
+// console.log(students);
 
-// arrays properties and methods
-console.log(students.length);
+// // arrays properties and methods
+// console.log(students.length);
 
-// get element in an array
-console.log(students[0]);
-console.log(students[students.length - 1]);
+// // get element in an array
+// console.log(students[0]);
+// console.log(students[students.length - 1]);
 
-// converting an afray to string = tsring, join
-console.log(students.toString());
-console.log(students.join(" "));
+// // converting an afray to string = tsring, join
+// console.log(students.toString());
+// console.log(students.join(" "));
 
-// adding elements to an array to the back - push
-students.push("ola");
-console.log(students);
+// // adding elements to an array to the back - push
+// students.push("ola");
+// console.log(students);
 
-// adding elements to an array to the front - unshift
-students.unshift("ebuka")
-console.log(students);
+// // adding elements to an array to the front - unshift
+// students.unshift("ebuka")
+// console.log(students);
 
-// removing elements from an array from the back - pop
-students.pop()
-console.log(students);
-students.pop()
-console.log(students);
+// // removing elements from an array from the back - pop
+// students.pop()
+// console.log(students);
+// students.pop()
+// console.log(students);
 
-// removing elements from an array from the front -shift
-students.shift()
-console.log(students);
-console.log(students.sort());
-// to reverse elements in an array
-console.log(students.reverse());
-// to check may be an elements is in array
-console.log(students.includes("ola"));
-console.log(students.includes("Mofe"));
+// // removing elements from an array from the front -shift
+// students.shift()
+// console.log(students);
+// console.log(students.sort());
+// // to reverse elements in an array
+// console.log(students.reverse());
+// // to check may be an elements is in array
+// console.log(students.includes("ola"));
+// console.log(students.includes("Mofe"));
 
-// indexof lastindexOf
-const anotherStudents = ["Toyin", "Zainab"];
-console.log(students.concat(anotherStudents, ["Ayo", "Ade", "Ade"]));
-
-
-
-const countries = ["spain", "france", "morocco", "scotland"];
-console.log(countries.length);
-countries.length > 5 ? console.log(`the countries is greater than 5`) : console.log(`is not greater than 5`);
-
-let savings = 500000
-const transaction = [5000, -5000, -100]
-transaction.push(-2000)
-transaction.push(5000)
-transaction.push(-3000)
-transaction.pop()
-let credit = 0;
-let debit = 0;
-console.log(transaction);
-for (i = 0; i < transaction.length; i++) {
-    //console.log(transaction[i]);
-    //savings = savings + transcations[i]
-    savings += transaction[i];
-    if (transaction[i] < 0) {
-        debit += transaction[i];
-        console.log(`you have been Debited ${transaction[i]}`);
-    } else {
-        credit += transaction[i];
-        console.log(`you have been credited ${transaction[i]}`);
-    }
-}
-
-console.log(`The total debit is ${debit}`);
-console.log(`The total credit is ${credit}`);
-console.log((`your account balance is ${savings}`));
-
-//filter, find, map, forEach
-// higher order function. callback function
-const friends = ["john", "jane", "Adams", "Jennifer", "Owen"];
-friends.includes("Lester");
-
-friends.forEach((friend,index) => {
-    console.log(`${index} The name of my friend is ${friend}`);
-});
-friends.forEach((f, index) => {
-    console.log(f, index);
-});
-
-//map
-
-friends.map((val, index) => {
-    console.log(index);
-    if (val === "jane") {
-        console.log(`${val} is my best friend`);
-    } else {
-        console.log(`${val} is just my friend`);
-    }
-});
-
-// filter find
-
-const filteredfriends = friends.filter ((friend) => {
-     // return friends.startsWith("a")
-    return friend.length > 3
-})
-console.log(filteredfriends);
-
-//find
-
-const founduser = friends.find((friend) => {
-    const user = "Anon";
-    return friend.startsWith("j");
-});
-console.log(founduser);
-
-const result = friends.filter((friend) => friend.length > 6);
-const result2 = friends.find((f) => f.startsWith("A"));
+// // indexof lastindexOf
+// const anotherStudents = ["Toyin", "Zainab"];
+// console.log(students.concat(anotherStudents, ["Ayo", "Ade", "Ade"]));
 
 
-console.log(result, result2);
 
-// reduce function
-//  accumulator
+// const countries = ["spain", "france", "morocco", "scotland"];
+// console.log(countries.length);
+// countries.length > 5 ? console.log(`the countries is greater than 5`) : console.log(`is not greater than 5`);
 
-const movement = [300, -50, 700, 400, -300];
-const total = movement.reduce((acc, val) => {
-    return acc + val;
-}, 0);
-console.log(`your Total bill is ${total}`);
+// let savings = 500000
+// const transaction = [5000, -5000, -100]
+// transaction.push(-2000)
+// transaction.push(5000)
+// transaction.push(-3000)
+// transaction.pop()
+// let credit = 0;
+// let debit = 0;
+// console.log(transaction);
+// for (i = 0; i < transaction.length; i++) {
+//     //console.log(transaction[i]);
+//     //savings = savings + transcations[i]
+//     savings += transaction[i];
+//     if (transaction[i] < 0) {
+//         debit += transaction[i];
+//         console.log(`you have been Debited ${transaction[i]}`);
+//     } else {
+//         credit += transaction[i];
+//         console.log(`you have been credited ${transaction[i]}`);
+//     }
+// }
 
-// OBJECT - propeties,methods
-// car key-value
-const user = {
-    firstName: "james",
-    lastName: "Bond",
-    age: 40,
-    job: "Actor",
-    friends:["Angela","Nelly","joe",]
-}
-console.log(user);
+// console.log(`The total debit is ${debit}`);
+// console.log(`The total credit is ${credit}`);
+// console.log((`your account balance is ${savings}`));
 
-// ACCESS properties from am object
-// dot notation,bracket
-console.log(user.firstName.toUpperCase());
-console.log(user.age);
+// //filter, find, map, forEach
+// // higher order function. callback function
+// const friends = ["john", "jane", "Adams", "Jennifer", "Owen"];
+// friends.includes("Lester");
 
-// objName['propertyName']
-console.log(user["friends"].includes('steven'));
-const nameKey = "Name";
-console.log(user["last" + nameKey]);
+// friends.forEach((friend,index) => {
+//     console.log(`${index} The name of my friend is ${friend}`);
+// });
+// friends.forEach((f, index) => {
+//     console.log(f, index);
+// });
 
-// adding properties to an array
-user.hasAcar = true
-user.status = "Married"
-console.log(user);
+// //map
 
-//remove
+// friends.map((val, index) => {
+//     console.log(index);
+//     if (val === "jane") {
+//         console.log(`${val} is my best friend`);
+//     } else {
+//         console.log(`${val} is just my friend`);
+//     }
+// });
 
-// delete
-delete user.friends;
-console.log(user);
+// // filter find
 
-const book = {
-    title: "Rich Dad Poor Dad",
-    author: "Robert Kiyosaki",
-    year: 2001,
-    pages: 207,
-    similarBooks: [
-        "Richest Man in Babylon",
-        "The Monk who sold his Ferrari",
-        "Think and Grow Rich",
-    ],
-    publisher: "Macmillan",
-    getSummary: function () {
-        return`The title of the book is ${this.title} written by ${this.author} in the ${this.year}`
-        console.log(this.author, this.year);
-    },
+// const filteredfriends = friends.filter ((friend) => {
+//      // return friends.startsWith("a")
+//     return friend.length > 3
+// })
+// console.log(filteredfriends);
 
-};
-console.log(book);
+// //find
 
-//object method
-book.getSummary();
-console.log(this);
+// const founduser = friends.find((friend) => {
+//     const user = "Anon";
+//     return friend.startsWith("j");
+// });
+// console.log(founduser);
 
-// object
-// const {propertyNames} = objName
+// const result = friends.filter((friend) => friend.length > 6);
+// const result2 = friends.find((f) => f.startsWith("A"));
 
-// publisher, author,year
-const { publisher, author, pages, year } = book;
-console.log(publisher, author, pages, 2001);
 
-const users = [
-    { name: "John", userName: "johnny123", password: "76792", age: 32 },
-    { name: "Jane", userName: "janee", password: "7dg2", age: 30 },
-    { name: "mario", userName: "mar123", password: "2", age: 15 },
-    { name: "kemi", userName: "kemo786", password: "76792", age: 69 },
+// console.log(result, result2);
+
+// // reduce function
+// //  accumulator
+
+// const movement = [300, -50, 700, 400, -300];
+// const total = movement.reduce((acc, val) => {
+//     return acc + val;
+// }, 0);
+// console.log(`your Total bill is ${total}`);
+
+// // OBJECT - propeties,methods
+// // car key-value
+// const user = {
+//     firstName: "james",
+//     lastName: "Bond",
+//     age: 40,
+//     job: "Actor",
+//     friends:["Angela","Nelly","joe",]
+// }
+// console.log(user);
+
+// // ACCESS properties from am object
+// // dot notation,bracket
+// console.log(user.firstName.toUpperCase());
+// console.log(user.age);
+
+// // objName['propertyName']
+// console.log(user["friends"].includes('steven'));
+// const nameKey = "Name";
+// console.log(user["last" + nameKey]);
+
+// // adding properties to an array
+// user.hasAcar = true
+// user.status = "Married"
+// console.log(user);
+
+// //remove
+
+// // delete
+// delete user.friends;
+// console.log(user);
+
+// const book = {
+//     title: "Rich Dad Poor Dad",
+//     author: "Robert Kiyosaki",
+//     year: 2001,
+//     pages: 207,
+//     similarBooks: [
+//         "Richest Man in Babylon",
+//         "The Monk who sold his Ferrari",
+//         "Think and Grow Rich",
+//     ],
+//     publisher: "Macmillan",
+//     getSummary: function () {
+//         return`The title of the book is ${this.title} written by ${this.author} in the ${this.year}`
+//         console.log(this.author, this.year);
+//     },
+
+// };
+// console.log(book);
+
+// //object method
+// book.getSummary();
+// console.log(this);
+
+// // object
+// // const {propertyNames} = objName
+
+// // publisher, author,year
+// const { publisher, author, pages, year } = book;
+// console.log(publisher, author, pages, 2001);
+
+// const users = [
+//     { name: "John", userName: "johnny123", password: "76792", age: 32 },
+//     { name: "Jane", userName: "janee", password: "7dg2", age: 30 },
+//     { name: "mario", userName: "mar123", password: "2", age: 15 },
+//     { name: "kemi", userName: "kemo786", password: "76792", age: 69 },
     
-];
-const canView = users.filter((user) => {
-    return user.age >= 18;
+// ];
+// const canView = users.filter((user) => {
+//     return user.age >= 18;
 
-});
-console.log(canView);
+// });
+// console.log(canView);
 
-const search = users.filter((user) => {
-    return user.name.includes("j") || user.userName.includes("j");
-});
-console.log(search);
+// const search = users.filter((user) => {
+//     return user.name.includes("j") || user.userName.includes("j");
+// });
+// console.log(search);
 
-// rest(lhs) and spread operator(rhs) 
-const ages = [32, 54, 16, 65, 89];
-const newAge = [2, ...ages, 76, 80]
-console.log(newAge);
+// // rest(lhs) and spread operator(rhs) 
+// const ages = [32, 54, 16, 65, 89];
+// const newAge = [2, ...ages, 76, 80]
+// console.log(newAge);
 
-// const [varNames] = arrName
-const [...rest] = ages;
-
-
-// console.log(h);
-console.log(rest);
-
-// MATH OBJECT - 8 math constants
-//console.log(math.PI);
-
-// math methods
-// sqrt, trunc, round, random, ceil, floor,
-// sqrt
-console.log(Math.sqrt(25));
-
-// trunc
-console.log(Math.trunc(25.77087));
-
-// round
-console.log(Math.round(25.77087));
-
-// ceil- ceiling round the figure up
-console.log(Math.ceil(25.77087));
-
-// floor- floor round the figure down
-console.log(Math.floor(25.77087));
-
-// random- it generate number between 0 and 1
-console.log(Math.random() * 2 + 1);
+// // const [varNames] = arrName
+// const [...rest] = ages;
 
 
-// random games
-const computer = ["rocks", "paper", "scissor"];
-const randomNum = Math.trunc(Math.random() * 3);
-const randomChoice = computer[randomNum];
-console.log(randomChoice);
-const playerChoice = prompt("Enter a choice (rock, paper, scissors):");
-const computerChoice = computer[randomNum];
+// // console.log(h);
+// console.log(rest);
 
-const checkWin = function (computer, player) {
-    if (computer === player) {
-        return "This is a tie";
-    } else if (player === "rock") {
-        if (computer === "scissors") {
-            return "Rock smashes scissors, You win! ";
-        } else {
-            return "paper covers rock, You lose! ";
-        }
-    } else if (player === "paper") {
-        if (computer === "rock") {
-            return "paper covers rock, you Win!";
-        } else {
-            return "scissor cuts paper, You Lose!";
-        }
-    } else if (player === "scissors") {
-        if (computer === "paper") {
-            return "scissors cut paper, You Win!";
-        } else {
-            return "Rock smashes scissors,you lose!";
-        }
+// // MATH OBJECT - 8 math constants
+// //console.log(math.PI);
+
+// // math methods
+// // sqrt, trunc, round, random, ceil, floor,
+// // sqrt
+// console.log(Math.sqrt(25));
+
+// // trunc
+// console.log(Math.trunc(25.77087));
+
+// // round
+// console.log(Math.round(25.77087));
+
+// // ceil- ceiling round the figure up
+// console.log(Math.ceil(25.77087));
+
+// // floor- floor round the figure down
+// console.log(Math.floor(25.77087));
+
+// // random- it generate number between 0 and 1
+// console.log(Math.random() * 2 + 1);
+
+
+// // random games
+// const computer = ["rocks", "paper", "scissor"];
+// const randomNum = Math.trunc(Math.random() * 3);
+// const randomChoice = computer[randomNum];
+// console.log(randomChoice);
+// const playerChoice = prompt("Enter a choice (rock, paper, scissors):");
+// const computerChoice = computer[randomNum];
+
+// const checkWin = function (computer, player) {
+//     if (computer === player) {
+//         return "This is a tie";
+//     } else if (player === "rock") {
+//         if (computer === "scissors") {
+//             return "Rock smashes scissors, You win! ";
+//         } else {
+//             return "paper covers rock, You lose! ";
+//         }
+//     } else if (player === "paper") {
+//         if (computer === "rock") {
+//             return "paper covers rock, you Win!";
+//         } else {
+//             return "scissor cuts paper, You Lose!";
+//         }
+//     } else if (player === "scissors") {
+//         if (computer === "paper") {
+//             return "scissors cut paper, You Win!";
+//         } else {
+//             return "Rock smashes scissors,you lose!";
+//         }
+//     }
+// };
+// const result5 = checkWin(computerChoice, playerChoice);
+// console.log(result5);
+
+
+// // ASYBCHRONOUS   JS
+// asynchronouslog
+console.log(1);
+// taking time log(take time)
+console.log(2);
+
+// for ( i = 0; i < 10000; i++) {
+// console.log(i);
+// }
+// console.log("ANOTHER THING");
+// console.log("first");
+// setTimeout(() => {
+//     console.log("second");
+// }, 15000);
+// setInterval(() => {
+    
+// }, console.log("I am in the interval");
+
+//  non blocking code
+console.log("A");
+console.log("B");
+console.log("C");
+setTimeout(() => {
+    console.log("IN THE TIMEOUT");
+}, 5000);
+console.log("C after the timeout");
+const myInterval = setInterval(() => {
+    console.log("Welcome user");
+}, 3000);
+
+setTimeout(() => {
+    clearInterval(myInterval);
+},);
+
+// FETCHING DATA - API - application programming interface
+
+// promises - is a container for future value
+
+const url = "https://jsonplaceholder.typicode.com/users";
+
+//fetch function- is used to fetch external function
+
+fetch(url).then((response) => {
+    console.log(response);
+    return response.json();
+})
+    .then((users) => {
+        console.log(users);
+    });
+
+    // to use multiple data and url
+    // fetch data or for useable function
+
+const fetchData = (url) => {
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+};
+
+//catch
+
+fetchData("https://jsonplaceholder.typicode.com/posts");
+
+//async /await
+
+//try and catch block
+try {
+    console.log(retyu);
+} catch (error) {
+    console.log(error);
+}
+
+// async await
+const getData = async(url) => {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log(error);
     }
 };
-const result5 = checkWin(computerChoice, playerChoice);
-console.log(result5);
+
+// storage api
+// localStorage.setItem, getItem, removeItem, clear, length
+localStorage.setItem("name", "Ola Ola");
+localStorage.setItem("token", "123456789");
+
+const result = localStorage.getItem("name");
+console.log(result);
+
+localStorage.removeItem("token");
+
+const length = localStorage.length;
+console.log(length);
+//localStorage.clear()
 
 
 
@@ -778,24 +876,4 @@ console.log(result5);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // ARRAYS
-// // OBJECT
-// // ASYBCHRONOUS   JS
 // // DOM        
