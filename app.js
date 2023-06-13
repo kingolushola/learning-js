@@ -57,10 +57,10 @@
 // // console.log(email2.slice(0, 8));
 // // console.log(email2.slice(5, 12));
 
-// // // string.substring(start,counnt of cters)
+// // // string.substring(start,count of cters)
 // // console.log(email2.substr(0, 12));
 
-// // // replace string content - replace reolaceALL
+// // // replace string content - replace replaceALL
 // // console.log(email2.replace("a", "$"));
 // // console.log(email2.replaceAll("a", "$"));
 
@@ -102,7 +102,7 @@
 
 // // console.log(5 / 2); //2.5
 // // // order of operation
-// // // increase te value of total by 10
+// // // increase the value of total by 10
 // // let total = 50;
 // // total = total + 10;
 // // console.log(total);
